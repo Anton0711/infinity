@@ -1,0 +1,151 @@
+.era {
+    background: black;
+    max-height: 810px;
+    display: flex;
+    align-items: center;
+    padding: 130px 0;
+
+    &__content {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__wrap {
+        max-width: 740px;
+        margin-right: 8px;
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+
+        span {
+            @include font(400, 16px, $blue);
+        }
+    }
+
+    &__title {
+        @include font(400, 64px, $title);
+
+    }
+
+    &__description {
+        @include font (400, 20px, rgba(223, 223, 223, 0.8));
+        margin-top: 38px;
+        max-width: 715px;
+    }
+
+    &__btn {
+        @include btn(25px, 34px);
+        @include font (400, 18px, $title);
+        background: $btn;
+        margin-top: 54px;
+    }
+}
+
+@media(max-width:1044px) {
+    .era {
+        padding: 80px 0;
+
+        &__title {
+            font-size: 44px;
+        }
+
+        &__description {
+            font-size: 14px;
+        }
+
+        &__btn {
+            @include btn(15px, 24px);
+        }
+    }
+}
+
+@media(max-width:865px) {
+    .era {
+        &__text {
+            img {
+                width: 22px;
+            }
+
+            span {
+                font-size: 12px;
+            }
+        }
+
+        &__title {
+            font-size: 34px;
+            margin-top: 2px;
+        }
+
+        &__description {
+            font-size: 12px;
+            margin-top: 15px;
+        }
+
+        &__btn {
+            margin-top: 21px;
+        }
+
+        &__img img {
+            width: 321px;
+        }
+    }
+}
+
+@media(max-width:678px) {
+    .era {
+        &__content {
+            background: url(../imgs/era.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+        }
+
+    }
+}
+
+@media(max-width:419px) {
+    .era {
+        &__title {
+
+            font-size: 24px;
+            margin-top: 0px;
+        }
+
+        &__description {
+            font-size: 10px;
+            margin-top: 0px;
+        }
+
+        &__btn {
+            @include btn(5px, 14px);
+            font-size: 12px;
+            margin-top: 0px;
+        }
+
+        &__wrap {
+            display: flex;
+            gap: 19px;
+        }
+
+        &__content {
+            width: 290px;
+        }
+    }
+}

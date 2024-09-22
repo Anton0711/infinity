@@ -1,0 +1,190 @@
+.shop {
+
+    background: url(../imgs/our.svg);
+    max-height: 1000px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+    &__content {
+        padding: 130px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__text {
+        display: flex;
+        justify-content: center;
+
+        span {
+            @include font(400, 16px, $blue);
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        @include font(400, 64px, $title);
+        max-width: 716px;
+        text-align: center;
+        margin-top: 11px;
+    }
+
+    &__description {
+        @include font(400, 20px, rgba(223, 223, 223, 0.8));
+        max-width: 698px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    &__img {
+        margin-right: 16px;
+        align-items: center;
+    }
+
+    &__choose {
+        display: flex;
+
+        padding: 35px 39px 32px 35px;
+        border-radius: 20px;
+
+        background: rgba(255, 255, 255, 0.15);
+        max-width: 499px;
+
+        h2 {
+            @include font(400, 32px, $title);
+            margin-bottom: 19px;
+
+        }
+
+        span {
+            @include font(400, 18px, rgba(223, 223, 223, 0.8));
+
+        }
+    }
+
+    &__categories {
+        gap: 32px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 64px;
+    }
+
+    &__wrap {
+        display: flex;
+        gap: 32px;
+    }
+
+}
+
+@media(max-width:1239px) {
+    .shop {
+        &__title {
+            font-size: 42px;
+        }
+
+        &__description {
+            margin-top: 8px;
+        }
+
+        &__categories {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        
+
+        &__choose {
+            padding: 15px 19px 12px 15px;
+        }
+    }
+}
+
+@media(max-width:637px) {
+    .shop {
+        &__text {
+            img {
+                width: 15px;
+            }
+
+            span {
+                font-size: 10px;
+            }
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__description {
+            font-size: 14px;
+        }
+
+        &__categories {
+            margin-top: 14px;
+            gap: 8px;
+        }
+
+        &__choose {
+            h2 {
+                font-size: 14px;
+                margin-bottom: 7px;
+            }
+
+            span {
+                font-size: 10px;
+            }
+        }
+
+        &__img {
+            margin-right: 1px;
+            img {
+                width: 17px;
+                
+            }
+        }
+
+        &__content {
+            padding: 70px 0;
+        }
+
+        &__wrap {
+            gap: 8px;
+        }
+    }
+}
+@media(max-width:568px){
+    .shop{
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+        }
+        &__choose{
+            span{
+                text-align: center;
+            }
+        }
+    }
+}
+@media(max-width:568px){
+    .shop{
+        &__title {
+            font-size: 22px;
+        }
+        
+        &__description {
+            font-size: 10px;
+        }
+        &__content {
+            padding: 20px 0;
+        }
+    }
+}
+
+

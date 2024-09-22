@@ -1,0 +1,138 @@
+.header {
+    padding-top: 20px;
+    background: linear-gradient(to right, #000000 55%, $blue 30%);
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: transparent;
+
+    }
+
+    &__img {
+        fill: white;
+    }
+
+    &__img :hover {
+        fill: #fac422;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    &__list {
+        @include font(400, 16px, $title);
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 60px;
+        margin-right: 200px;
+    }
+
+    &__list :hover {
+        color: #fac422;
+    }
+
+    &__item a {
+        text-decoration: none;
+        @include font(400, 16px, $title);
+    }
+
+    &__btn {
+        margin-left: 36px;
+        @include font(400, 18px, $title);
+        @include btn(15px, 31px);
+        border: 1px solid $title;
+        background: transparent;
+
+    }
+
+    &__btn :hover {
+        color: #fac422;
+    }
+
+    &__span {
+        background: $title;
+        border-radius: 12px;
+        padding: 3px 6px;
+        text-align: center;
+        @include font(400, 11px, black);
+        position: absolute;
+        top: -15px;
+        left: 25px;
+    }
+
+    &__svg {
+        position: relative;
+        fill: $title;
+    }
+
+    &__svg :hover {
+        fill: #fac422;
+    }
+
+    &__burger {
+        display: none;
+
+        h2 {
+            @include font(400, 18px, $title);
+        }
+
+    }
+}
+
+@media(max-width:1183px) {
+    .header {
+        &__list {
+            margin-right: 100px;
+        }
+    }
+}
+
+@media(max-width:1064px) {
+    .header {
+        &__list {
+            margin-right: 50px;
+        }
+    }
+}
+
+@media(max-width:1006px) {
+    .header {
+        &__list {
+            display: none;
+        }
+
+        &__burger {
+            img {
+                width: 50px;
+            }
+
+            display: block;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+}
+
+@media(max-width:626px) {
+    .header {
+        &__content {
+            display: flex;
+
+        }
+
+        &__burger {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        &__wrap {
+            display: none;
+        }
+    }
+}

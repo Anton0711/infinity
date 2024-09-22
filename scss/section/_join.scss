@@ -1,0 +1,110 @@
+.join {
+    background: url(../imgs/join.svg);
+
+    &__content {
+        padding: 129px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            @include font(400, 72px, #141820);
+            max-width: 847px;
+            text-align: center;
+
+
+        }
+
+        p {
+            @include font(400, 18px, #555);
+            max-width: 802px;
+            text-align: center;
+            margin-top: 32px;
+        }
+    }
+
+    &__label {
+        margin-top: 44px;
+
+        border: none;
+        display: flex;
+
+    }
+
+    &__email {
+        @include font (400, 18px, #555);
+        padding: 26px 226px 26px 13px;
+        border: 0;
+        outline: 0;
+        outline-offset: 0;
+    }
+
+    &__btn {
+        @include btn(21px, 30px);
+        background: $btn;
+        @include font(400, 18px, $title);
+
+    }
+
+    // &__span {
+    //     position: relative;
+    // }
+
+    // &__img ::before {
+    //     position: absolute;
+    //    top: 10px;
+    // }
+}
+
+@media(max-width:793px) {
+    .join {
+        &__content {
+            padding: 70px 0;
+
+            h2 {
+                font-size: 44px;
+
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        &__btn {
+            @include btn(11px, 20px);
+            font-size: 14px;
+        }
+
+        &__email {
+            padding: 13px 113px 13px 7px;
+            font-size: 14px;
+        }
+    }
+}
+@media(max-width:478px){
+    .join{
+        &__content {
+            padding-top: 40px;
+
+            h2 {
+                font-size: 32px;
+
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+        &__btn {
+            @include btn(6px, 11px);
+            font-size: 12px;
+        }
+
+        &__email {
+            padding: 7px 55px 7px 4px;
+            font-size: 12px;
+        }
+    }
+}

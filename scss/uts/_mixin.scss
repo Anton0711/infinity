@@ -1,0 +1,25 @@
+@mixin btn($t, $r) {
+    padding: $t $r $t $r ;
+    border: none;
+}
+
+@mixin font($w, $s, $c) {
+    font-family: "Orbitron", sans-serif;
+    font-weight: $w;
+    font-size: $s;
+    color: $c;
+}
+
+@mixin choose {
+    height: 732px;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        @include font(400, 48px, $title);
+    }
+}
